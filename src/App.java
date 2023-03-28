@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // get data movie from API and save into the string
-        String url = "https://raw.githubusercontent.com/rafaelxulipa/alura-stickers/main/src/imdbtop250moviesDATA.json";
+        String url = "https://raw.githubusercontent.com/rafaelxulipa/alura-stickers/main/src/imdbtop250moviesdata.json";
 
         URI uri = URI.create(url);
 
