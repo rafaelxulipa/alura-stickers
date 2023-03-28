@@ -34,10 +34,23 @@ public class App {
         //System.out.println(moviesList.get(0));
 
         for (Map<String,String> movie : moviesList) {
-            System.out.println(movie.get("title"));
-            System.out.println(movie.get("image"));
-            System.out.println(movie.get("imDbRating"));
-            System.out.println();
+            System.out.println("\u001b[1mTitle: \u001b[m" + "\u001b[32;1m" + movie.get("title") + " \u001b[m");
+            System.out.println("\u001b[1mImage URL: \u001b[m" + "\u001b[3m" + movie.get("image") + "\u001b[m");
+            //System.out.println(movie.get("imDbRating"));
+            double rating = Double.parseDouble(movie.get("imDbRating"));
+            int starNumber = (int) rating;
+
+            if (starNumber <= 8) {
+                for (int n = 1; n <= starNumber; n++) {
+                    System.out.print("👎");
+                }
+            } else {
+                for (int n = 1; n <= starNumber; n++) {
+                    System.out.print("⭐");
+                }
+            }
+
+            System.out.println("\n");
         }
         
 
