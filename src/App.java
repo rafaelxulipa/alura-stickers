@@ -10,7 +10,9 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // get data movie from API and save into the string
-        String url = "https://raw.githubusercontent.com/rafaelxulipa/alura-stickers/main/src/imdbtop250moviesdata.json";
+        //String url = "https://raw.githubusercontent.com/rafaelxulipa/alura-stickers/main/src/imdbtop250moviesdata.json";
+
+        String url = "https://raw.githubusercontent.com/rafaelxulipa/alura-stickers/main/src/MostPopularMovies.json";
 
         URI uri = URI.create(url);
 
@@ -40,7 +42,7 @@ public class App {
             double rating = Double.parseDouble(movie.get("imDbRating"));
             int starNumber = (int) rating;
 
-            if (starNumber <= 8) {
+            if (starNumber <= 6) {
                 for (int n = 1; n <= starNumber; n++) {
                     System.out.print("👎");
                 }
